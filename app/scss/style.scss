@@ -23,23 +23,44 @@ li {
   display: inline-block;
 }
 /*modules*/
-.container-outer{
-    max-width: 2000px;
-    width: 100%;
+.container-outer {
+  max-width: 2000px;
+  width: 100%;
 }
-h1 {
-  font-size: 92px;
+.container-inner {
+  width: 80%;
+  margin: 0 auto;
 }
-h2 {
-  font-size: 60px;
+.row {
+  display: flex;
 }
-h3 {
-  font-size: 48px;
+.col-6 {
+  flex-basis: 50%;
 }
-.colored-text {
-  color: $red;
+.col-4 {
+  flex-basis: calc(100% / 3);
+}
+.header {
+  font-weight: 700;
+  &--xs {
+    font-size: 48px;
+  }
+  &--md {
+    font-size: 60px;
+  }
+  &--xl {
+    font-size: 92px;
+  }
+}
+
+.accented-text {
+  color: $accentColor;
+}
+.uppercase-line {
+  text-transform: capitalize;
 }
 .button {
+  border-radius: 36px;
   padding: 22px 36px;
   font-size: 18px;
   font-weight: 700;
@@ -52,83 +73,88 @@ h3 {
   cursor: pointer;
   position: relative;
 }
-.logo:before{
-    content: "";
-    position: absolute;
-    background: url(../img/logo-circle.png) 50% 50% no-repeat;
-    width: 20px;
-    height: 20px;
-    top: -8px;
-    right: -12px;
+.logo:before {
+  content: "";
+  position: absolute;
+  background: url(../img/logo-circle.png) 50% 50% no-repeat;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  right: -12px;
 }
 
 .logo__link {
-  color: $black;
+  color: $mainText;
 }
 /*main stlyles*/
-/*---intro---*/
+/*---INTRO---*/
 
 .intro {
   max-width: 2000px;
   height: 100vh;
-  background: linear-gradient(to right, rgba(#eff2f6, 1) calc(100% * 2 / 3), rgba(#ff343d, 1) calc(100% * 2 / 3));
+  background: linear-gradient(
+    to right,
+    rgba($headerBg, 1) calc(100% * 2 / 3),
+    rgba($accentColor, 1) calc(100% * 2 / 3)
+  );
   position: relative;
   overflow: hidden;
-  z-index:10;
-}
-.intro:after{
-    content:'mars';
-    color: $red;
+  z-index: 10;
+  &:after {
+    content: "mars";
+    color: $accentColor;
     display: block;
     position: absolute;
     transform: rotate(90deg);
     font-size: 300px;
     font-weight: 700;
     text-transform: uppercase;
-    text-shadow: 0px 0px 55px rgba(#000101, 0.3);
+    text-shadow: 0px 0px 55px rgba($textShadow, 0.3);
     top: 260px;
     right: -340px;
     z-index: -10;
+  }
+  &-header {
+    margin-top: 70px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+      margin-right: 70px;
+    }
+    &__phone {
+      margin-left: 70px;
+      margin-right: auto;
+    }
+    &__order-link {
+    }
+  }
 }
-.intro__header {
-  margin-top: 70px;
-  margin-bottom: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-.header-logo {
-  margin-right: 70px;
-}
-.header__phone {
-  margin-left: 70px;
-  margin-right: auto;
-}
-.header__buy-link {
-}
+
 .intro__slider {
   /*background-color: rgba(grey, 0.5);*/
 }
 .slider__item {
   width: 100%;
-  outline: 1px solid gray;
+  outline: 1px solid grey;
 }
 .slide-item__text-box {
   max-width: calc(100% * 1 / 3-200px);
   float: left;
-  padding-left: 200px;
+  padding-left: 100px;
   vertical-align: middle;
   outline: 1px dashed green;
 }
-.text-box__header{
-    margin-top: 60%;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    z-index: 10;
+.text-box__header {
+  margin-top: 60%;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  z-index: 10;
 }
 .text-box__text {
   font-size: 14px;
   line-height: 30px;
-  color: $dark;
+  color: $secondaryText;
 }
 .slide-item__image-box {
   float: right;
@@ -152,66 +178,86 @@ h3 {
    
 }*/
 .slide-item__image-box:before {
-    content: "\f111";
-    position: absolute;
-    font-size: 30vw;
-    top: 50%;
-    left: 50%;
-    color: #000101;
-    transform: translate(-50%, -50%);
-    z-index: -10;
-     
-  }
+  content: "\f111";
+  font-family: fontAwesome;
+  position: absolute;
+  font-size: 30vw;
+  top: 50%;
+  left: 50%;
+  color: $textShadow;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
 .slide-img {
   max-width: 80%;
   outline: 1px dotted yellow;
 }
 
-/*---/intro---*/
-/*---header---*/
+/*---/INTRO---*/
+/*---MAIN---*/
 
-/*---/header---*/
 /*---features---*/
-.features__header{
-    margin-top: 125px;
+.features {
+  padding-top: 125px;
+  &-header {
     margin-bottom: 125px;
     text-transform: capitalize;
     text-align: center;
-}
-.features__box{
+  }
+  &-box {
     margin-bottom: 125px;
     display: flex;
-    justify-content: space-evenly;
-}
-.features-card{
-    text-align: center;
-}
-.features-card__img{
-    margin-bottom: 75px;
-}
-.feature-card__text{
-    font-size: 30px;
-    text-transform: capitalize;
+    justify-content: space-between;
+    &__card {
+      flex-basis: 25%;
+      text-align: center;
+      &-img {
+        margin-bottom: 75px;
+      }
+      &-text {
+        font-size: 30px;
+        text-transform: capitalize;
+      }
+    }
+  }
 }
 /*---/features---*/
 /*---generation---*/
-.generation{
-    display: flex;
+.generation {
+  &-image {
+    &__img {
+      max-width: 100%;
+    }
+  }
+  &-text {
+    background: linear-gradient(rgba($visionBg, 0.95)), url(../img/generation-bg.png);
+    background-position: top 50% right -60%;
+    background-repeat: no-repeat;
+    padding-top: 188px;
+    padding-left: 105px;
+    &__content {
+      line-height: 102px;
+      &:last-of-type {
+        margin-bottom: 50px;
+        :after {
+          content: ".";
+          font-size: 92px;
+          color: $accentColor;
+        }
+      }
+    }
+    &__button {
+      color: $invertedText;
+      border: 2px solid $visionBorder; 
+      transition: all .2s ease-in; 
+      &:hover{
+        color: $accentColor;
+        border: 2px solid $accentColor;
+      }
+    }
+  }
 }
-.col6{
-    flex-basis: 50%;
-    flex-grow: 1;
-}
-.col-6--text{
-    max-width: 100%; 
-    background: url(../img/dron-Icon.png) 195% 40% no-repeat;
-}
-.col-6--text::first-letter{
-    text-transform: uppercase;
-}
-.generation-pic{
-    max-width: 100%;
-}
+
 /*---/generation---*/
 /*---header---*/
 

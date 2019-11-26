@@ -13,23 +13,24 @@
 <body>
   <header class="intro container-outer">
     <div class="container-inner">
-      <div class="intro__header">
-        <div class="header__logo logo">
+      <div class="intro-header">
+        <div class="intro-header__logo logo">
           <a href="#" class="logo__link">mars</a>
         </div>
-        <div class="header__phone">
+        <div class="intro-header__phone">
           <a href="tel:+123456" class="phone-link">+48 604 300 500</a>
         </div>
-        <div class="header__buy-link">
-          <a href="#" class="buy-link">buy now</a>
+        <div class="intro-header__order-link">
+          <a href="#" class="order-link">buy now</a>
         </div>
         <!--todo adaptive nav list-->
-        <nav class="header__nav">
-          <ul class="nav-links">
-            <li class="nav-link"></li>
+        <nav class="intro-header__nav">
+          <ul class="intro-header__nav-list">
+            <li class="intro-header__nav-link"></li>
           </ul>
         </nav>
       </div>
+      <!--todo slides: inline-block-- flex + wrap flex blocks -->
       <div class="intro__slider">
         <ul class="slider-items">
           <li class="slider__item">
@@ -65,43 +66,48 @@
         </ul>
       </div>
       <!--todo scroll down button-->
-      <div class="header__scroll-down">
+      <div class="header-scroll-button">
 
       </div>
     </div>
 
   </header>
-  <section class="features container-outer">
-    <h2 class="features__header header header--sm">features</h2>
-    <div class="features__box">
-      <div class="features-card">
-        <img src="img/New_technology.png" alt="" class="features-card__img">
-        <p class="feature-card__text">new technology</p>
+  <main>
+    <section class="features container-outer">
+      <div class="container-inner">
+        <h2 class="features-header header header--xs">features</h2>
+        <div class="features-box">
+          <div class="features-box__card">
+            <img src="img/New_technology.png" alt="" class="features-box__card-img">
+            <p class="features-box__card-text">new technology</p>
+          </div>
+          <div class="features-box__card">
+            <img src="img/Good_signal.png" alt="" class="features-box__card-img">
+            <p class="features-box__card-text">good signal</p>
+          </div>
+          <div class="features-box__card">
+            <img src="img/Easy_to_use.png" alt="" class="features-box__card-img">
+            <p class="features-box__card-text">easy to use</p>
+          </div>
+          <div class="features-box__card">
+            <img src="img/Visibility.png" alt="" class="features-box__card-img">
+            <p class="features-box__card-text">visibility</p>
+          </div>
+        </div>
       </div>
-      <div class="features-card">
-        <img src="img/Good_signal.png" alt="" class="features-card__img">
-        <p class="feature-card__text">good signal</p>
+    </section>
+    <section class="generation row">
+      <div class="col-6 generation-image">
+        <img src="img/generation.png" alt="" class="generation-image__img">
       </div>
-      <div class="features-card">
-        <img src="img/Easy_to_use.png" alt="" class="features-card__img">
-        <p class="feature-card__text">easy to use</p>
+      <div class="col-6 generation-text">
+        <p class="generation-text__content header header--xl uppercase-line">new <span
+            class="accented-text">generation</span></p>
+        <p class="generation-text__content header header--xl">of vision</p>
+        <a href="#" class="generation-text__button button">view more</a>
       </div>
-      <div class="features-card">
-        <img src="img/Visibility.png" alt="" class="features-card__img">
-        <p class="feature-card__text">visibility</p>
-      </div>
-    </div>
-  </section>
-  <section class="generation">
-    <div class="col-6 col-6--img">
-      <img src="img/generation.png" alt="" class="generation-pic">
-    </div>
-    <div class="col-6 col-6--text">
-      <h1 class="generation-header">new <span class="colored-text">generation<br></span>of vision <span
-          class="colored-text">.</span></h1>
-      <a href="#" class="button">view more</a>
-    </div>
-  </section>
+    </section>
+  </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
