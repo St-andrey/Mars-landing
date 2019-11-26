@@ -1,0 +1,11 @@
+# Dependency directory
+node_modules
+
+#
+gulfile.js
+
+#
+package.jason
+
+#package-lock.json
+
