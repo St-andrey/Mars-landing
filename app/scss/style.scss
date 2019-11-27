@@ -53,18 +53,20 @@ li {
   &--xl {
     font-size: $xl;
   }
+  &--accented:after {
+    content: ".";
+    font-size: $xl;
+    color: $accentColor;
+  }
 }
-
+.header::first-letter {
+  text-transform: uppercase;
+}
 .accented-text {
   color: $accentColor;
-}
-.accent-dot:after {
-  content: ".";
-  font-size: $xl;
-  color: $accentColor;
-}
-.uppercase-line::first-letter {
-  text-transform: uppercase;
+  &:before {
+    content: "\202F";
+  }
 }
 .button {
   border-radius: 2.6rem;
@@ -93,22 +95,81 @@ li {
 .logo__link {
   color: $mainText;
 }
-/*main stlyles*/
+/*---slick---*/
+.my-dots {
+  position: absolute;
+  left: -46.5%;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.my-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.my-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.my-dots li button:hover,
+.my-dots li button:focus {
+  outline: none;
+}
+.my-dots li button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background: $sliderInactive;
+  width: 7px;
+  height: 7px;
+  top: 0;
+  left: 0;
+}
+.my-dots li.slick-active button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background: $accentColor;
+  width: 7px;
+  height: 7px;
+}
+/*---/slick---*/
+/*MAIN STYLES*/
 /*---INTRO---*/
 
 .intro {
-  max-width: 2000px;
-  height: 100vh;
   background: linear-gradient(
     to right,
     rgba($headerBg, 1) calc(100% * 2 / 3),
     rgba($accentColor, 1) calc(100% * 2 / 3)
   );
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   overflow: hidden;
+  position: relative;
   z-index: 10;
-  &:after {
-    content: "mars";
+  &-company-name {
     color: $accentColor;
     display: block;
     position: absolute;
@@ -117,21 +178,38 @@ li {
     font-weight: 700;
     text-transform: uppercase;
     text-shadow: 0px 0px 55px rgba($textShadow, 0.3);
-    top: 260px;
-    right: -340px;
+    top: 85px;
+    right: -15%;
     z-index: -10;
   }
-  &-header {
+    &-header {
     margin-top: 70px;
     margin-bottom: 100px;
     display: flex;
+    flex-shrink: 1;
     justify-content: space-between;
+    align-items: center;
     &__logo {
-      margin-right: 70px;
     }
     &__phone {
-      margin-left: 70px;
+      margin-left: 90px;
       margin-right: auto;
+      padding-left: 20px;
+      position: relative;
+      &:before {
+        content: "\f095";
+        color: $secondaryText;
+        font-family: fontAwesome;
+        font-size: 10px;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        transform: rotate(90deg);
+      }
+      &-link {
+        color: $secondaryText;
+        font-weight: 500;
+      }
     }
     &__order-link {
     }
@@ -139,66 +217,43 @@ li {
 }
 
 .intro__slider {
-  /*background-color: rgba(grey, 0.5);*/
-}
-.slider__item {
-  width: 100%;
-  outline: 1px solid grey;
-}
-.slide-item__text-box {
-  max-width: calc(100% * 1 / 3-200px);
-  float: left;
-  padding-left: 100px;
-  vertical-align: middle;
-  outline: 1px dashed green;
-}
-.text-box__header {
-  margin-top: 60%;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  z-index: 10;
-}
-.text-box__text {
-  font-size: 14px;
-  line-height: 30px;
-  color: $secondaryText;
-}
-.slide-item__image-box {
-  float: right;
-  width: calc(100% * 2 / 3);
-  text-align: center;
+  flex-grow: 1;
   position: relative;
-  z-index: 20;
-  outline: 1px dashed blue;
 }
-/*.slide-item__image-box:before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  background: linear-gradient(to top, (#fff) 0%, (#fff) 100%);
-  transform: translate(-50%, -50%);
-  z-index: -10;
-   
-}*/
-.slide-item__image-box:before {
-  content: "\f111";
-  font-family: fontAwesome;
-  position: absolute;
-  font-size: 30vw;
-  top: 50%;
-  left: 50%;
-  color: $textShadow;
-  transform: translate(-50%, -50%);
-  z-index: -10;
+.slider {
+  &-card {
+    display: flex;
+    height: 62vh;
+    &__text-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: calc(100% / 3);
+      padding-left: 6%;
+    }
+    &__header {
+      margin-bottom: 48px;
+      text-transform: uppercase;
+    }
+    &__text {
+    }
+    &__image-box {
+      background: url(../img/intro-slider-bg.png) 50% 50% no-repeat;
+      background-size: contain;
+      flex-basis: calc(100% * 2 / 3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    &__img {
+      display: block;
+      height: 56vh;
+      max-width: 100%;
+    }
+  }
 }
-.slide-img {
-  max-width: 80%;
-  outline: 1px dotted yellow;
-}
+
 /*---/INTRO---*/
 /*---MAIN---*/
 /*---features section---*/
@@ -242,11 +297,9 @@ li {
     background-repeat: no-repeat;
     padding-top: 188px;
     padding-left: 105px;
-    &__content {
+    &__header {
       line-height: 102px;
-      &:last-of-type {
-        margin-bottom: 50px;
-      }
+      margin-bottom: 50px;
     }
     &__button {
       color: $invertedText;
@@ -266,11 +319,9 @@ li {
     padding-left: 6%;
     padding-top: 327px;
     padding-bottom: 232px;
-      &__content {
+    &__header {
       line-height: 102px;
-      &:last-of-type {
-        margin-bottom: 62px;
-      }
+      margin-bottom: 62px;
     }
     &__button {
       color: $mainText;
@@ -284,11 +335,11 @@ li {
   }
   &-image {
     padding-top: 145px;
-    
+
     overflow: hidden;
     &__img {
       position: relative;
-    left: 13%;
+      left: 13%;
       display: block;
       max-width: 100%;
     }
