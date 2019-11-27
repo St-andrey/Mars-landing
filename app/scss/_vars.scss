@@ -1,8 +1,11 @@
 /*
     fonts
 */
-$mnt:                 'Montserrat', sans-serif;
+$mnt:               "Montserrat", sans-serif;
 
+$xs:                 48px;
+$md:                 60px;
+$xl:                 92px;
 /*
     colors
 */
@@ -17,9 +20,6 @@ $headerBg:          #eff2f6;
 $visionBg:          #232323;
 
 $visionBorder:      #3b3b3b;
-$generationBorder:  #eff2f6;
+$flyingBorder:  #eff2f6;
 
-$accentColor:       #ff343d; 
-
-
-
+$accentColor:       #ff343d;

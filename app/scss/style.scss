@@ -5,6 +5,7 @@
 /* common */
 body {
   font-family: $mnt;
+  font-size: 14px;
 }
 
 * {
@@ -25,6 +26,7 @@ li {
 /*modules*/
 .container-outer {
   max-width: 2000px;
+  margin: auto;
   width: 100%;
 }
 .container-inner {
@@ -43,31 +45,36 @@ li {
 .header {
   font-weight: 700;
   &--xs {
-    font-size: 48px;
+    font-size: $xs;
   }
   &--md {
-    font-size: 60px;
+    font-size: $md;
   }
   &--xl {
-    font-size: 92px;
+    font-size: $xl;
   }
 }
 
 .accented-text {
   color: $accentColor;
 }
-.uppercase-line {
-  text-transform: capitalize;
+.accent-dot:after {
+  content: ".";
+  font-size: $xl;
+  color: $accentColor;
+}
+.uppercase-line::first-letter {
+  text-transform: uppercase;
 }
 .button {
-  border-radius: 36px;
-  padding: 22px 36px;
-  font-size: 18px;
+  border-radius: 2.6rem;
+  padding: 1.6rem 2.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 .logo {
-  font-size: 24px;
+  font-size: 1.7rem;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
@@ -192,11 +199,9 @@ li {
   max-width: 80%;
   outline: 1px dotted yellow;
 }
-
 /*---/INTRO---*/
 /*---MAIN---*/
-
-/*---features---*/
+/*---features section---*/
 .features {
   padding-top: 125px;
   &-header {
@@ -215,22 +220,24 @@ li {
         margin-bottom: 75px;
       }
       &-text {
-        font-size: 30px;
+        font-size: 2.14rem;
         text-transform: capitalize;
       }
     }
   }
 }
-/*---/features---*/
-/*---generation---*/
-.generation {
+/*---/features section---*/
+/*---vision section---*/
+.vision {
   &-image {
     &__img {
+      display: block;
       max-width: 100%;
+      width: 100%;
     }
   }
   &-text {
-    background: linear-gradient(rgba($visionBg, 0.95)), url(../img/generation-bg.png);
+    background: linear-gradient(rgba($visionBg, 0.95)), url(../img/vision-bg.png);
     background-position: top 50% right -60%;
     background-repeat: no-repeat;
     padding-top: 188px;
@@ -239,28 +246,60 @@ li {
       line-height: 102px;
       &:last-of-type {
         margin-bottom: 50px;
-        :after {
-          content: ".";
-          font-size: 92px;
-          color: $accentColor;
-        }
       }
     }
     &__button {
       color: $invertedText;
-      border: 2px solid $visionBorder; 
-      transition: all .2s ease-in; 
-      &:hover{
+      border: 2px solid $visionBorder;
+      transition: all 0.2s ease-in;
+      &:hover {
         color: $accentColor;
         border: 2px solid $accentColor;
       }
     }
   }
 }
+/*---/vision section---*/
+/*---flying section---*/
+.flying {
+  &-text {
+    padding-left: 6%;
+    padding-top: 327px;
+    padding-bottom: 232px;
+      &__content {
+      line-height: 102px;
+      &:last-of-type {
+        margin-bottom: 62px;
+      }
+    }
+    &__button {
+      color: $mainText;
+      border: 2px solid $flyingBorder;
+      transition: all 0.2s ease-in;
+      &:hover {
+        color: $accentColor;
+        border: 2px solid $accentColor;
+      }
+    }
+  }
+  &-image {
+    padding-top: 145px;
+    
+    overflow: hidden;
+    &__img {
+      position: relative;
+    left: 13%;
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+/*---/flying section---*/
+/*---journey section---*/
 
-/*---/generation---*/
-/*---header---*/
+/*---/journey section---*/
+/*---FOOTER---*/
 
-/*---/header---*/
+/*---/FOOTER---*/
 
 @import "media";
