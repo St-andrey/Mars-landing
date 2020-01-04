@@ -42,6 +42,9 @@ li {
 .col-4 {
   flex-basis: calc(100% / 3);
 }
+.col-8 {
+  flex-basis: calc(100% * 2 / 3);
+}
 .header {
   font-weight: 700;
   &--xs {
@@ -70,13 +73,13 @@ li {
 }
 .button {
   border-radius: 2.6rem;
-  padding: 1.6rem 2.6rem;
   font-size: 1.3rem;
   font-weight: 700;
+  padding: 1.6rem 2.6rem;
   text-transform: uppercase;
+  transition: all 0.2s ease-in;
 }
 .logo {
-  font-size: 1.7rem;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
@@ -169,20 +172,7 @@ li {
   overflow: hidden;
   position: relative;
   z-index: 10;
-  &-company-name {
-    color: $accentColor;
-    display: block;
-    position: absolute;
-    transform: rotate(90deg);
-    font-size: 300px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 55px rgba($textShadow, 0.3);
-    top: 85px;
-    right: -15%;
-    z-index: -10;
-  }
-    &-header {
+  &-header {
     margin-top: 70px;
     margin-bottom: 100px;
     display: flex;
@@ -190,6 +180,7 @@ li {
     justify-content: space-between;
     align-items: center;
     &__logo {
+      font-size: 1.7rem;
     }
     &__phone {
       margin-left: 90px;
@@ -213,29 +204,54 @@ li {
     }
     &__order-link {
     }
+    &-slider {
+      flex-grow: 1;
+      position: relative;
+    }
   }
-}
-
-.intro__slider {
-  flex-grow: 1;
-  position: relative;
+  &-company-name {
+    color: $accentColor;
+    display: block;
+    position: absolute;
+    transform: rotate(90deg);
+    font-size: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 55px rgba($textShadow, 0.3);
+    top: 85px;
+    right: -15%;
+    z-index: -10;
+  }
+  &-scroll-button {
+    position: absolute;
+    bottom: 145px;
+    left: 6.2%;
+    transform: rotate(-90deg);
+    &__link {
+      color: $mainText;
+      border: 2px solid transparent;
+      &:hover {
+        color: $accentColor;
+        border: 2px solid $accentColor;
+      }
+    }
+  }
 }
 .slider {
   &-card {
     display: flex;
     height: 62vh;
     &__text-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       flex-basis: calc(100% / 3);
       padding-left: 6%;
     }
     &__header {
       margin-bottom: 48px;
+      margin-top: 50%;
       text-transform: uppercase;
     }
     &__text {
+      color: $secondaryText;
     }
     &__image-box {
       background: url(../img/intro-slider-bg.png) 50% 50% no-repeat;
@@ -253,7 +269,6 @@ li {
     }
   }
 }
-
 /*---/INTRO---*/
 /*---MAIN---*/
 /*---features section---*/
@@ -304,7 +319,6 @@ li {
     &__button {
       color: $invertedText;
       border: 2px solid $visionBorder;
-      transition: all 0.2s ease-in;
       &:hover {
         color: $accentColor;
         border: 2px solid $accentColor;
@@ -316,7 +330,7 @@ li {
 /*---flying section---*/
 .flying {
   &-text {
-    padding-left: 6%;
+    padding-left: 9.6%;
     padding-top: 327px;
     padding-bottom: 232px;
     &__header {
@@ -326,7 +340,6 @@ li {
     &__button {
       color: $mainText;
       border: 2px solid $flyingBorder;
-      transition: all 0.2s ease-in;
       &:hover {
         color: $accentColor;
         border: 2px solid $accentColor;
@@ -335,7 +348,6 @@ li {
   }
   &-image {
     padding-top: 145px;
-
     overflow: hidden;
     &__img {
       position: relative;
@@ -347,7 +359,28 @@ li {
 }
 /*---/flying section---*/
 /*---journey section---*/
-
+.journey {
+  background: url(../img/journey-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;
+  padding-top: 780px;
+  
+  &-header {
+    color: $invertedText;
+    margin-bottom: 56px;
+  }
+  &-button {
+    background-color: $mainBg;
+    color: #318f76;
+    /*!--todo - trasparent text 
+    background-clip: text;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  --*/
+  }
+}
 /*---/journey section---*/
 /*---FOOTER---*/
 
