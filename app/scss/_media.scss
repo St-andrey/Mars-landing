@@ -1,0 +1,567 @@
+@media (min-width: 2400px) {
+    body {
+        font-size: 2rem;
+    }
+
+    .panorama-left {
+        background: radial-gradient(
+                circle at 100% 50%,
+                rgba($mainText, 0.08) 8%,
+                rgba($mainText, 0.1) 12%,
+                rgba($mainText, 0.06) 12%,
+                rgba($mainText, 0.08) 20%,
+                rgba($mainText, 0.04) 20%,
+                rgba($mainText, 0.06) 28%,
+                transparent 10%
+            ),
+            url(../img/panorama-col4-bg.png) 10% 50% / cover no-repeat;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header-company-name {
+        font-size: 350px;
+    }
+}
+
+@media all and (max-height: 900px) {
+    .header-scroll-button {
+        bottom: 45px;
+        left: 16px;
+        transform: rotate(0deg);
+    }
+}
+
+@media all and (max-height: 768px) {
+    .header-company-name {
+        font-size: 225px;
+    }
+}
+
+@media (max-width: 1920px) {
+    .header--xl {
+        font-size: 4.8rem;
+    }
+
+    .header--accented:after {
+        font-size: 4.8rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .header--xl {
+        font-size: 4rem;
+    }
+
+    .header--accented:after {
+        font-size: 4rem;
+    }
+
+    .header-slide__text-header {
+        margin-bottom: 38px;
+    }
+
+    .panorama-left {
+        padding-right: 60px;
+    }
+
+    .panorama-right {
+        padding-left: 60px;
+    }
+
+    .features-header {
+        margin-bottom: 100px;
+    }
+
+    .features-box__card-img {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .header--xl {
+        font-size: 3.5rem;
+    }
+
+    .header--accented:after {
+        font-size: 3.5rem;
+    }
+
+    .header--md {
+        font-size: 3.2rem;
+    }
+
+    .header-slide__text-content {
+        line-height: 1.8;
+    }
+
+    .header-slide__text-header {
+        margin-bottom: 28px;
+    }
+
+    .features-header {
+        margin-bottom: 75px;
+    }
+
+    .vision-text {
+        background: linear-gradient(rgba($visionBg, 0.95)), url(../img/vision-bg.png) 200% 50% no-repeat;
+    }
+
+    .vision-text__header,
+    .flying-text__header {
+        line-height: 90px;
+    }
+
+    .vision-text,
+    .flying-text {
+        padding-left: 80px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .header--md {
+        font-size: 3rem;
+    }
+
+    .header--xs {
+        font-size: 2.8rem;
+    }
+
+    .button {
+        border-radius: 30px;
+        font-size: 16px;
+        padding: 18px 32px;
+    }
+
+    .header-slide__text-content {
+        line-height: 1.6;
+    }
+
+    .header-scroll-button {
+        bottom: 110px;
+        left: -50px;
+    }
+
+    .panorama-left {
+        padding-right: 40px;
+    }
+
+    .panorama-right {
+        padding-left: 40px;
+    }
+    .features-box__card-img {
+        margin-bottom: 30px;
+    }
+
+    .vision-text {
+        background: linear-gradient(rgba($visionBg, 0.95)), url(../img/vision-bg.png) 50% 50% no-repeat;
+        background-size: contain;
+    }
+
+    .vision-text,
+    .flying-text {
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 1152px) {
+    .header--xl {
+        font-size: 3rem;
+    }
+
+    .header--accented:after {
+        font-size: 3rem;
+    }
+
+    .header--md,
+    .header--xs {
+        font-size: 2.7rem;
+    }
+    .button {
+        border-radius: 30px;
+        font-size: 15px;
+        padding: 14px 26px;
+    }
+
+    .header-company-name {
+        font-size: 250px;
+    }
+
+    .header-top {
+        padding-top: 50px;
+    }
+
+    .header-top__phone {
+        margin-left: 50px;
+        &:before {
+            top: 3px;
+            left: 10px;
+
+            color: $accentColor;
+        }
+    }
+
+    .header-top__phone-link {
+        font-weight: 700;
+
+        color: $mainText;
+    }
+
+    .header-slide__text-header {
+        margin-bottom: 25px;
+    }
+
+    .header-slide__text-content {
+        line-height: 1.4;
+    }
+
+    .header-scroll-button {
+        bottom: 50px;
+        left: 13px;
+    }
+
+    .features-header {
+        margin-bottom: 50px;
+    }
+
+    .features-box__card-text {
+        font-size: 20px;
+    }
+
+    .vision-text__header,
+    .flying-text__header {
+        line-height: 70px;
+    }
+
+    .footer-logo {
+        margin-bottom: 18px;
+    }
+
+    .footer-background {
+        font-size: 160px;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header--xl {
+        font-size: 2.7rem;
+    }
+
+    .header--accented:after {
+        font-size: 2.7rem;
+    }
+
+    .header--md,
+    .header--xs {
+        font-size: 2.4rem;
+    }
+
+    .header-company-name {
+        font-size: 225px;
+    }
+
+    .panorama-button {
+        right: 20px;
+    }
+
+    .footer-logo {
+        margin-bottom: 14px;
+    }
+
+    .footer-background {
+        font-size: 140px;
+    }
+}
+
+@media (max-width: 800px) and (max-height: 600px) {
+    .header--xl {
+        font-size: 2rem;
+    }
+
+    .header--accented:after {
+        font-size: 2rem;
+    }
+
+    .header--md,
+    .header--xs {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        border-radius: 30px;
+        font-size: 13px;
+        padding: 9px 14px;
+    }
+
+    .header-company-name {
+        font-size: 180px;
+        padding-left: 0px;
+    }
+    .header-slide__text-header {
+        margin-bottom: 15px;
+    }
+    .header-slide__text-content {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .panorama-left,
+    .panorama-right {
+        padding-left: 30px;
+    }
+
+    .features-header {
+        margin-bottom: 30px;
+    }
+
+    .features-box__card-img {
+        margin-bottom: 20px;
+    }
+
+    .vision-text,
+    .flying-text {
+        padding-left: 30px;
+    }
+
+    .vision-text__header,
+    .flying-text__header {
+        line-height: 45px;
+    }
+
+    .journey-header {
+        margin-bottom: 40px;
+    }
+
+    .footer-background {
+        font-size: 110px;
+    }
+}
+//!!! max-height: 420px)
+@media (max-width: 640px) and (max-height: 420px){
+    body {
+        font-size: 12px;
+    }
+
+    .header--xl {
+        font-size: 1.6rem;
+    }
+
+    .header--md,
+    .header--xs {
+        font-size: 1.3rem;
+    }
+
+    .header-company-name {
+        font-size: 135px;
+    }
+
+    .header-top {
+        padding-top: 30px;
+    }
+
+    .header-top__logo {
+        padding-left: 10px;
+    }
+
+    .header-top__phone {
+        margin-left: 20px;
+    }
+
+    .header-top__order-link {
+        margin-right: 27px;
+    }
+
+    .header-top__burger-open {
+        right: 20px;
+    }
+    .header-slide {
+        padding: 15% 15% 10% 15%;
+    }
+    .header-slide__text-box {
+        display: none;
+    }
+    .header-slide__text-header {
+        margin-bottom: 15px;
+    }
+
+    .vision-text__header,
+    .flying-text__header {
+        margin-bottom: 30px;
+
+        line-height: 30px;
+    }
+
+    .footer-logo {
+        margin-bottom: 4px;
+    }
+
+    .footer-background {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 575px) and (orientation: portrait){
+.header--xl,
+.header--md,
+.header--xs{
+    font-size: 1.8rem;
+}
+
+.header--accented:after {
+    font-size: 1.9rem;
+}
+
+    .header-title-wrapper {
+        width: 90%;
+        height: 101%;
+        margin-top: -25px;
+
+        background: url(../img/header025-img.png) 50% 100% / contain no-repeat;
+    }
+
+    .header-company-name {
+        font-size: 150px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        justify-content: space-between;
+
+        left: 0;
+        top: 5%;
+        width: 60%;
+        height: 80%;
+    }
+
+    .header-top__logo {
+        padding-left: 0;
+        order: 1;
+    }
+
+    .header-top__phone {
+        margin: 20px auto;
+        order: 3;
+    }
+
+    .header-top__order-link {
+        color: $mainText;
+        margin: 0;
+        margin-bottom: 100px;
+        order: 2;
+    }
+
+    .header-top__burger-open {
+        order: 2;
+        top: -10%;
+        transform: translateX(50%);
+    }
+    .header-slider {
+        display: none;
+    }
+
+    .header-scroll-button {
+        position: absolute;
+        bottom: 5%;
+        left: 33%;
+        transform: translateX(-50%);
+    }
+
+    .panorama-container {
+        flex-direction: column;
+
+        height: 120vh;
+    }
+
+    .panorama-left,
+    .panorama-right {
+        flex-basis: 50%;
+        height: 60vh;
+        padding: 0;
+    }
+
+    .panorama-left {
+        justify-content: center;
+
+        text-align: center;
+    }
+    .panorama-right {
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(90deg, rgba($mainText, 0.65) 0%, transparent 100%),
+            url(../img/panorama-col8-bg.png) 50% 50% no-repeat;
+        background-size: cover;
+    }
+
+    .panorama-button {
+        position: absolute;
+        transform: rotate(90deg), translateX(-50%);
+        top: 48%;
+        right: 33%;
+
+        color: $mainText;
+        background: $mainBg;
+        border: 2px solid $secondaryText;
+
+        &:hover {
+            color: $accentColor;
+            background: $mainBg;
+            border: 2px solid $accentColor;
+        }
+    }
+
+    .vision-text,
+    .flying-text {
+        flex-basis: 100%;
+
+        padding-left: 30px;
+    }
+
+    .vision-image,
+    .flying-image {
+        display: none;
+    }
+
+    .footer-container {
+        height: 30vh;
+    }
+    .footer-background {
+        top: 60%;
+
+        font-size: 50px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape){
+    .header-company-name{
+        font-size: 130px;
+    }
+.header-slider{
+    display: none;
+}
+   //!!! панораму загоризонталить
+   //!!!! меню столбом вертикально, на бэке квардртк, марс меньше, под ним скролл секции по 80vh
+
+
+   //!!! текск на слайде по ховеру
+
+   //!!!дотсы
+
+   //!!!ссылка на дозвон
+
+//!!!обернуть флаинг и вижн ссылками
+
+///!!!journey прозрачная кнопка
+
+///!!!journey параллакс
+
+//!!! скролл на главном экране
+
+//!! анимированный квадрик
+
+//!! анимации на соксе
+
+}

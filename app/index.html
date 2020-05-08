@@ -11,24 +11,150 @@
 </head>
 
 <body>
-  <header class="intro container-outer">
-    <div class="container-inner">
-      <div class="intro-header">
-        <div class="intro-header__logo logo">
+  <!--!!!!!!! TODO slick dots  -->
+  <!--===HEADER===-->
+  <!-- NEW HEADER-->
+  <header class="header-section">
+    <div class="header-container container">
+      <!--header-layout-->
+      <div class="header-title-box">
+        <div class="header-title-wrapper">
+          <h1 class="header-company-name header-company-name--main">mars</h1>
+        </div>
+      </div>
+      <!--/header layout-->
+      <!--header content-->
+      <!-- --header-top-menu-->
+      <div class="header-top">
+        <div class="header-top__logo logo">
           <a href="#" class="logo__link">mars</a>
         </div>
-        <div class="intro-header__phone">
-          <a href="tel:+123456" class="intro-header__phone-link">+48 604 300 500</a>
+        <div class="header-top__phone">
+          <a href="tel:+123456" class="header-top__phone-link">+48 604 300 500</a>
         </div>
-        <div class="intro-header__order-link">
-          <a href="#" class="intro-header__order-link">buy now</a>
+        <!--!!! burger and offer -posa!!!!-->
+        <div class="header-top__order-link">
+          <a href="#" class="header-top__order-link">buy now</a>
         </div>
-        <!--todo adaptive nav list-->
-        <nav class="intro-header__nav">
-          <ul class="intro-header__nav-list">
-            <li class="intro-header__nav-link"></li>
+        <div class="header-top__burger-open">
+          <div class="header-top__burger-line"></div>
+        </div>
+      </div>
+      <!--/--header-top-menu-->
+      <!-- --header slider-->
+      <div class="header-slider__box">
+        <div class="header-slider">
+          <!-- slide1 -->
+          <div class="header-slide__wrapper">
+            <div class="header-slider__slide header-slide">
+              <div class="header-slide__text-box">
+                <h2 class="header-slide__text-header header header--md">phantom</h2>
+                <p class="header-slide__text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Quisque eget euismod dolor.
+                </p>
+              </div>
+              <div class="header-slide__image-box">
+                <div class="header-slide__hidden">
+                  <h2 class="header-slide__hidden-header header header--md">phantom</h2>
+                  <p class="header-slide__hidden-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque eget euismod dolor.
+                  </p>
+                </div>
+                <picture>
+                  <!-- <source media="(min-width: 1000px )" srcset="img/header-img.png"> -->
+                  <!-- <source media="(max-width: 900px )" srcset="img/header05-img.png">
+                  <source media="(max-width: 800px )" srcset="img/header025-img.png"> -->
+                  <img src="img/header-img.png" alt="" class="header-slide__img">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <!--slide2-->
+          <div class="header-slide__wrapper">
+            <div class="header-slider__slide header-slide">
+              <div class="header-slide__text-box">
+                <h2 class="header-slide__text-header header header--md">phantom</h2>
+                <p class="header-slide__text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Quisque eget euismod dolor.
+                </p>
+              </div>
+              <div class="header-slide__image-box">
+                <div class="header-slide__hidden">
+                  <h2 class="header-slide__hidden-header header header--md">phantom</h2>
+                  <p class="header-slide__hidden-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque eget euismod dolor.
+                  </p>
+                </div>
+                <picture>
+                  <!-- <source media="(min-width: 1000px )" srcset="img/header-img.png">
+                  <source media="(max-width: 900px )" srcset="img/header05-img.png">
+                  <source media="(max-width: 800px )" srcset="img/header025-img.png"> -->
+                  <img src="img/header-img.png" alt="" class="header-slide__img">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--/--header slider-->
+      <!-- --header button-->
+      <div class="header-scroll-button">
+        <a href="#" class="header-scroll-button__link button">scroll down</a>
+      </div>
+      <!--/--header button-->
+      <!--MENU HIDDEN -->
+      <div class="hidden-menu">
+        <div class="header-title-box">
+          <div class="header-title-wrapper">
+            <div class="hidden-menu__burger-close">
+            </div>
+            <h1 class="header-company-name header-company-name--hidden">mars</h1>
+          </div>
+        </div>
+        <nav class="hidden-menu__main-nav">
+          <ul class="hidden-menu__nav-list">
+            <li class="hidden-menu__nav-item"><a href="#" class="hidden-menu__nav-link">main</a></li>
+            <li class="hidden-menu__nav-item"><a href="#" class="hidden-menu__nav-link">about us</a></li>
+            <li class="hidden-menu__nav-item"><a href="#" class="hidden-menu__nav-link">prices</a></li>
+            <li class="hidden-menu__nav-item"><a href="#" class="hidden-menu__nav-link">news</a></li>
+            <li class="hidden-menu__nav-item"><a href="#" class="hidden-menu__nav-link">contact</a></li>
           </ul>
         </nav>
+      </div>
+    </div>
+  </header>
+  <!------------------------------------------------------------------------------------->
+  <!-- <article class="intro">
+    
+    <nav class="intro-menu">
+      <ul class="intro-menu__list">
+        <li class="intro-menu__item"><a href="#" class="intro-menu__link">main</a></li>
+        <li class="intro-menu__item"><a href="#" class="intro-menu__link">about us</a></li>
+        <li class="intro-menu__item"><a href="#" class="intro-menu__link">prices</a></li>
+        <li class="intro-menu__item"><a href="#" class="intro-menu__link">news</a></li>
+        <li class="intro-menu__item"><a href="#" class="intro-menu__link">contact</a></li>
+      </ul>
+      <h1 class="intro-company-name intro-company-name--menu">mars</h1>
+      <div class="intro-menu__burger-close">
+    </nav>
+    </div>
+   
+    <div class="container-inner">
+      <div class="intro-top">
+        <div class="intro-top__logo logo">
+          <a href="#" class="logo__link">mars</a>
+        </div>
+        <div class="intro-top__phone">
+          <a href="tel:+123456" class="intro-top__phone-link">+48 604 300 500</a>
+        </div> -->
+  <!--!!! burger and offer -posa!!!!-->
+  <!-- <div class="intro-top__order-link">
+          <a href="#" class="intro-top__order-link">buy now</a>
+        </div>
+        <div class="intro-top__burger-open">
+          <div class="intro-top__burger-line"></div>
+        </div>
       </div>
       <div class="intro-slider">
         <ul class="slider">
@@ -73,72 +199,126 @@
               <div class="slider-card__text-box">
                 <h3 class="slider-card__header header header--xs">phantom</h3>
                 <p class="slider-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore?
-                </p>
-              </div>
+                </p> -->
+  <!-- </div>
               <div class="slider-card__image-box">
                 <img src="img/intro-img.png" alt="" class="slider-card__img">
               </div>
             </li>
           </div>
       </div>
-      <h1 class="intro-company-name">mars</h1>
-      <!--todo scroll down button + js-->
+      <h1 class="intro-company-name intro-company-name--main">mars</h1> -->
+  <!--todo scroll down button + js-->
 
-      <div class="intro-scroll-button">
+  <!-- <div class="intro-scroll-button">
         <a href="#" class="intro-scroll-button__link button">scroll down</a>
       </div>
     </div>
-  </header>
-  <main>
-    <section class="features container-outer">
-      <div class="container-inner">
-        <h2 class="features-header header header--xs">features</h2>
-        <div class="features-box">
-          <div class="features-box__card">
-            <img src="img/New_technology.png" alt="" class="features-box__card-img">
-            <p class="features-box__card-text">new technology</p>
-          </div>
-          <div class="features-box__card">
-            <img src="img/Good_signal.png" alt="" class="features-box__card-img">
-            <p class="features-box__card-text">good signal</p>
-          </div>
-          <div class="features-box__card">
-            <img src="img/Easy_to_use.png" alt="" class="features-box__card-img">
-            <p class="features-box__card-text">easy to use</p>
-          </div>
-          <div class="features-box__card">
-            <img src="img/Visibility.png" alt="" class="features-box__card-img">
-            <p class="features-box__card-text">visibility</p>
-          </div>
+  </article> -->
+
+  <!--/===HEADER===-->
+  <!--===MAIN===-->
+  <!-- <main> -->
+  <!----=PANORAMA SECTION=---->
+  <section class="panorama-section">
+    <div class="panorama-container container">
+      <div class="panorama-left col-4">
+        <a href="#" class="panorama-link">
+          <h2 class="panorama-left__header header header--md">tap to fly</h2>
+          <p class="panorama-left__content">Lorem ipsum dolor sit amet.</p>
+        </a>
+      </div>
+      <div class="panorama-right col-8">
+        <a href="#" class="panorama-link">
+          <h2 class="panorama-right__header header header--md">fly higher<br>than before</h2>
+          <a href="#" class="panorama-button button">view more</a>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--.--=PANORAMA SECTION=---->
+  <!----=FEATURES SECTION=---->
+  <!-- <section class="features-section">
+    <div class="container features-container">
+      <h2 class="features-header header header--xs">features</h2>
+      <div class="features-box">
+        <div class="features-box__card">-->
+          <!--TODO обернуть боксы ссылками-->
+          <!-- <a href="" class="features-box__link"></a>
+          <img src="img/New_technology.png" alt="" class="features-box__card-img">
+          <p class="features-box__card-text">new technology</p>
+        </div>
+        <div class="features-box__card">
+          <img src="img/Good_signal.png" alt="" class="features-box__card-img">
+          <p class="features-box__card-text">good signal</p>
+        </div>
+        <div class="features-box__card">
+          <img src="img/Easy_to_use.png" alt="" class="features-box__card-img">
+          <p class="features-box__card-text">easy to use</p>
+        </div>
+        <div class="features-box__card">
+          <img src="img/Visibility.png" alt="" class="features-box__card-img">
+          <p class="features-box__card-text">visibility</p>
         </div>
       </div>
-    </section>
-    <section class="vision row container-outer">
-      <div class="col-6 vision-image">
+    </div>
+  </section>  -->
+  <!----=FEATURES SECTION=-- -->
+  <!----=VISION SECTION=---->
+  <section class="vision-section">
+    <div class="vision-container container">
+      <div class="vision-image col-6">
         <img src="img/vision-img.png" alt="" class="vision-image__img">
       </div>
-      <div class="col-6 vision-text">
+      <div class="vision-text col-6">
         <h2 class="vision-text__header header header--xl header--accented">new<span
-            class="accented-text">generation</span> of vision</h2>
-        <a href="#" class="vision-text__button button">view more</a>
+            class="accented-text">generation</span><br> of vision</h2>
+        <div class="vision-text__button-box">
+          <a href="#" class="vision-text__button button">view more</a>
+        </div>
       </div>
-    </section>
-    <section class="flying row container-outer">
-      <div class="col-6 flying-text">
+    </div>
+  </section>
+  <!--/--=VISION SECTION=---->
+  <!----=FLYING SECTION=---->
+  <section class="flying-section">
+    <div class="flying-container container">
+      <div class="flying-text col-6">
         <h2 class="flying-text__header header header--xl header--accented">new<span
-            class="accented-text">generation</span>
-          of vision</h2>
-        <a href="#" class="flying-text__button button">view more</a>
+            class="accented-text">generation</span><br>of flying</h2>
+        <div class="flying-text__button-box">
+          <a href="#" class="flying-text__button button">view more</a>
+        </div>
       </div>
-      <div class="col-6 flying-image">
+      <div class="flying-image col-6">
         <img src="img/flying.png" alt="" class="flying-image__img">
       </div>
-    </section>
-    <section class="journey">
-      <h2 class="journey-header header header--xl">start your journey.</h2>
-      <a href="#" class="journey-button button">view more</a>
-    </section>
-  </main>
+    </div>
+  </section>
+  <!--/--=FLYING SECTION=---->
+  <!----=JOURNEY SECTION=---->
+  <section class="journey-section">
+    <div class="container">
+      <div class="journey-container">
+        <h2 class="journey-header header header--xl">start your journey.</h2>
+        <a href="#" class="journey-button button">view more</a>
+      </div>
+    </div>
+  </section>
+  <!--/--=JOURNEY SECTION=---->
+  <!-- </main> -->
+  <!--/===MAIN===-->
+  <!--===FOOTER===-->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="logo-box">
+        <div class="footer-logo logo">mars</div>
+      </div>
+      <div class="footer-copyright">2016 Copyright. All rights reserved by Symu.co</div>
+      <div class="footer-background">phantom</div>
+    </div>
+  </footer>
+  <!--===FOOTER===-->
   <!--phantom- before 50 50 transform - 50%*2-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
