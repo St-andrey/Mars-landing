@@ -490,10 +490,10 @@ li {
   flex-direction: column;
   justify-content: center;
 
- width: 90%;
- height: 100%;
- margin-left: auto;
- margin-right: auto;
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hidden-menu__nav-item {
@@ -762,10 +762,24 @@ li {
 }
 
 /*---/INTRO---*/
+
+/*======SCROLL STYLES TEMP */
+
+/*=========SCROLL STYLES TEMP */
+
 /*---MAIN---*/
 /*---panorama section---*/
 .panorama-section {
-  background: $mainBg;
+  background: linear-gradient(90deg red 80%, blue 90%);
+
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .panorama-container {
@@ -855,6 +869,15 @@ li {
 
 .features-section {
   background: $mainBg;
+
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .features-container {
@@ -896,6 +919,15 @@ li {
 /*---vision section---*/
 .vision-section {
   background: $mainBg;
+
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .vision-container {
@@ -919,7 +951,6 @@ li {
   padding-left: 100px;
 
   background: linear-gradient(rgba($visionBg, 0.95)), url(../img/vision-bg.png) 150% 50% no-repeat;
-  
 }
 .vision-text__header {
   margin-bottom: 50px;
@@ -943,6 +974,15 @@ li {
 /*---flying section---*/
 .flying-section {
   background: $mainBg;
+
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .flying-container {
@@ -995,35 +1035,108 @@ li {
 /*---journey section---*/
 
 .journey-section {
+  position: relative;
+  overflow: hidden;
+
+  height: 100vh;
+
   background: $mainBg;
+
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 //todo параллакс
-.journey-container {
-  min-height: 100vh;
-  padding-top: 60vh;
+.journey-parallax-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // height: 130%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  padding-top: 100vh;
 
   text-align: center;
 
   background: url(../img/journey-bg.png) 50% 50% / cover no-repeat;
 }
+
+.journey-parallax-decor {
+  position: absolute;
+  z-index: 20;
+
+  &--top {
+    left: -10%;
+    top: -16%;
+    background: rgba(red, 0.0);
+
+    transform: rotate(180deg);
+  }
+
+  
+  &--bottom {
+    left: 0;
+    bottom: -15%;
+
+    background: rgba(green, 0.0);
+  }
+}
+
+.journey-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  text-align: center;
+  
+}
+
 .journey-header {
   margin-bottom: 78px;
 
-  letter-spacing: 1.1;
+  letter-spacing: 1.1px;
 
-  color: $invertedText;
+  color:$invertedText;
 }
 
 .journey-button {
-  background-color: $mainBg;
+  
   color: #318f76;
+
+  background: linear-gradient(30deg, rgba($mainBg, 1), rgba($mainBg, 0.5), rgba($mainBg, 1));
+  background-size: 1000%;
+
   margin-bottom: 208px;
-  //**!!!!
-  //   --todo - trasparent text
-  //   background-clip: text;
-  //   -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
+  border: 2px solid $mainBg;
+
+  &:hover {
+    animation: journey-button 30s linear infinite;
+  }
 }
+
+@keyframes journey-button {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 1000%;
+  }
+}
+
+
 
 /*---/journey section---*/
 /*---FOOTER---*/

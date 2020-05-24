@@ -340,7 +340,7 @@
     }
 }
 //!!! max-height: 420px)
-@media (max-width: 640px) and (max-height: 420px){
+@media (max-width: 640px) and (max-height: 420px) {
     body {
         font-size: 12px;
     }
@@ -403,16 +403,16 @@
     }
 }
 
-@media (max-width: 575px) and (orientation: portrait){
-.header--xl,
-.header--md,
-.header--xs{
-    font-size: 1.8rem;
-}
+@media (max-width: 575px) and (orientation: portrait) {
+    .header--xl,
+    .header--md,
+    .header--xs {
+        font-size: 1.8rem;
+    }
 
-.header--accented:after {
-    font-size: 1.9rem;
-}
+    .header--accented:after {
+        font-size: 1.9rem;
+    }
 
     .header-title-wrapper {
         width: 90%;
@@ -535,28 +535,32 @@
     }
 }
 
-@media (max-height: 500px) and (orientation: landscape){
-    .header-company-name{
+@media (max-height: 500px) and (orientation: landscape) {
+    .header-company-name {
         font-size: 130px;
     }
-.header-slider{
-    display: none;
+    .header-slider {
+        display: none;
+    }
 }
-   //!!! панораму загоризонталить
-   //!!!! меню столбом вертикально, на бэке квардртк, марс меньше, под ним скролл секции по 80vh
+//!!! панораму загоризонталить
 
 
-   //!!! текск на слайде по ховеру
+//!! фичи обернуть, сделать скейл на ховере и появляющийся текст 
 
-   //!!!дотсы
+//!!!! меню столбом вертикально, на бэке квардртк, марс меньше, под ним скролл секции по 80vh
 
-   //!!!ссылка на дозвон
+//!!! текск на слайде по ховеру, для мобил отелючить
+
+//!!!дотсы
+
+//!!!ссылка на дозвон
 
 //!!!обернуть флаинг и вижн ссылками
 
-///!!!journey прозрачная кнопка
+//!! +++  journey прозрачная кнопка
 
-///!!!journey параллакс
+//!!! +++ journey параллакс
 
 //!!! скролл на главном экране
 
@@ -564,4 +568,8 @@
 
 //!! анимации на соксе
 
-}
+//!! добавить форму входа на buy now
+
+//!! неоморфизм для кнопок + анимированная граница
+
+//!!хидден меню на ховере большая копия пункта бэкграундом, остальные пункты исчезают
